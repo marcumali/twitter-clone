@@ -76,8 +76,8 @@ const SidebarLeft: React.FC<Props> = ({ className }: Props) => {
 
   return (
     <div className={"w-xl-200px ms-lg-auto d-flex flex-column " + className}>
-      <div className="mt-3 position-sticky top-13px">
-        <Logo src="next.svg" width={70} link="/" className="mb-3" />
+      <div className="mt-3 position-sticky top-13px w-xl-200px">
+        <Logo src="logo-symbol.png" width={40} link="/" className="mb-3" />
         {menuItems?.map(( item:any, index:number ) => (
           <div key={item.id}>
             { router.pathname === '/public' ? 
