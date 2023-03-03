@@ -57,7 +57,7 @@ const Publisher: React.FC<Props> = ({ className, hasPrivacy, btnLabel }: Props) 
   return (
     <div className={"border-bottom-1-solid-gray-1 pb-3 px-3 " + className}>
       <div className="d-flex">
-        <Avatar sm={30} md={40} className="me-3" />
+        <Avatar sm={30} md={40} src="https://i.pravatar.cc/40/40" className="me-3" />
         <div className="w-100">
           { hasPrivacy && <Select options={privacy} className="select mb-3 w-140px select-sm" classNamePrefix="select" defaultValue={{ label: "Public", value: 0 }} /> }
           <div className="border-bottom-1-solid-gray-1 pb-3 mb-3">
@@ -85,7 +85,7 @@ const Publisher: React.FC<Props> = ({ className, hasPrivacy, btnLabel }: Props) 
             }
           </div>
           <div className="d-flex align-items-center justify-content-between">
-            <div className="d-flex align-items-center text-primary">
+            <div className="d-flex align-items-center">
               <div className="position-relative overflow-hidden">
                 <Form.Control type="file" className="position-absolute top-0 start-0 h-100 w-100 opacity-0" />
                 <Icon icon="material-symbols:image-rounded" className="fs-22px"/>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "label": "Trending in the Philippines",
+    "trendName": "God is Good",
+    "shares": 583,
+    "link": "#"
+  },
+  {
+    "id": 1,
+    "label": "Trending in the Philippines",
+    "trendName": "Answered Prayer",
+    "shares": 83,
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "label": "Trending only for Holla",
+    "trendName": "Amen",
+    "shares": 856,
+    "link": "#"
+  }
+]

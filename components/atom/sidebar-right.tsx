@@ -8,34 +8,11 @@ import Trending from '../molecule/trending'
 import Input from '@/components/molecule/input'
 import WhoToFollow from './who-to-follow'
 import SearchResult from './search-result'
+import trendList from '@/data/static/trendList.json'
 
 const SidebarRight: React.FC<Props> = ({ className }: Props) => {
 
   const router = useRouter()
-
-  const trendList = [
-    {
-      id: 0,
-      label: 'Trending in the Philippines',
-      trendName: 'God is Good',
-      shares: 583,
-      link: '#',
-    },
-    {
-      id: 1,
-      label: 'Trending in the Philippines',
-      trendName: 'Answered Prayer',
-      shares: 83,
-      link: '#',
-    },
-    {
-      id: 2,
-      label: 'Trending only for Holla',
-      trendName: 'Amen',
-      shares: 856,
-      link: '#',
-    },
-  ];
 
   const [show, setShow] = useState(false)
 

@@ -14,28 +14,28 @@ const menuItems = [
     id: 0,
     label: 'Home',
     icon: 'lucide:home',
-    link: '#',
+    link: '/',
     public: false,
   },
   {
     id: 1,
     label: 'Home',
     icon: 'lucide:home',
-    link: '#',
+    link: '/',
     public: true,
   },
   {
     id: 2,
     label: 'Explore',
     icon: 'lucide:hash',
-    link: '#',
+    link: '/explore',
     public: true,
   },
   {
     id: 3,
     label: 'Explore',
     icon: 'lucide:hash',
-    link: '#',
+    link: '/explore',
     public: false,
   },
   {
@@ -112,7 +112,7 @@ const SidebarLeft: React.FC<Props> = ({ className }: Props) => {
             </ModalButton>
             <DropdownButton className="mt-auto" seamless options={[{ id: 0, label: 'Logout' }]}>
             <div className="d-flex align-items-center text-start w-100 py-3">
-              <Avatar sm={30} md={40} className="mx-auto ms-xl-0 me-xl-3" />
+              <Avatar sm={30} md={40} src="https://i.pravatar.cc/40/40" className="mx-auto ms-xl-0 me-xl-3" />
               <div className="text-base lh-sm d-none d-xl-block">
                 <div className="fw-600 clamp clamp-1">Marc Umali</div>
                 <div className="clamp clamp-1">@marcumali</div>
