@@ -51,7 +51,7 @@ const SearchResult = (props:any) => {
           <div className={"d-flex align-items-center justify-content-between " + (index + 1 === RecentSearches.length ? 'mb-0' : 'mb-3') }>
             <Link href={item.link}>
               <div className="d-flex align-items-center">
-                <Avatar src={item.avatar} className="me-2" />
+                <Avatar sm={30} md={40} src={item.avatar} className="me-2" />
                 <div className="clamp clamp-1 text-base">{item.name}</div>
               </div>
             </Link>

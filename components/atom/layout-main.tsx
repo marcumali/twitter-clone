@@ -5,10 +5,10 @@ import SidebarLeft from './sidebar-left'
 const LayoutMain: React.FC<Props> = ({children}: Props) => {
 
 	return (
-			<div className="h-100 mx-auto px-sm-5 maxw-1100px">
+			<div className="h-100 mx-auto px-md-5 maxw-1100px">
 				<div className="d-flex">
 					<SidebarLeft />
-					<div className="w-100p mx-sm-3">
+					<div className="w-100p mx-md-3">
 						<div className="h-100 border-x-gray-1">
 							{children}
 						</div>

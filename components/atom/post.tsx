@@ -42,7 +42,7 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 			{ postList && postList.map( (item:any, index:number ) => (
 				<div className="d-flex border-bottom-1-solid-gray-1 p-3" key={item.id}>
 					<Link href={item.link}>
-						<Avatar className="me-3" src={item.avatar}/>
+						<Avatar sm={30} md={40} className="me-3" src={item.avatar}/>
 					</Link>
 					<div className="w-100">
 						<div className="d-flex align-items-center justify-content-between w-100 mb-2">
@@ -66,7 +66,7 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 							<ModalButton modalTitle="Write your Reply" btnChildren={<SeamlessBtn />}> 
 								<div className="d-flex px-3 mb-5">
 									<Link href={item.link}>
-										<Avatar className="me-3" src={item.avatar} />
+										<Avatar sm={30} md={40} className="me-3" src={item.avatar} />
 									</Link>
 									<div>
 										<div className="d-flex align-items-center">

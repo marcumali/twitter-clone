@@ -37,7 +37,7 @@ const WhoToFollow: React.FC<Props> = ({ className, title, showMoreLink }: Props)
 				<div className={"d-flex align-items-center justify-content-between " + (index + 1 === list.length ? 'mb-0' : 'mb-3' ) } key={item.id}>
 					<div className="d-flex align-items-center lh-sm">
 						<Link href={item.link}>
-							<Avatar width={40} height={40} src={item.avatar}  className="me-2" />
+							<Avatar sm={30} md={40} src={item.avatar}  className="me-2" />
 						</Link>
 						<Link href={item.link}>
 							<div className="pe-3">

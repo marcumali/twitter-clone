@@ -169,48 +169,25 @@ a {
 
 @for $i from 0 through 500 {
 
-  [data-width="#{$i}"] {
+  [d-sm="#{$i}"] {
+    height: #{($i * 1)}px$imp;
     width: #{($i * 1)}px$imp;
   }
-  @include media-breakpoint-up(lg) {
-    [data-lg-width="#{$i}"] {
+
+  @include media-breakpoint-up(md) {
+    [d-md="#{$i}"] {
+      height: #{($i * 1)}px$imp;
       width: #{($i * 1)}px$imp;
     }
   }
 
-  [data-height="#{$i}"] {
-    height: #{($i * 1)}px$imp;
-  }
   @include media-breakpoint-up(lg) {
-    [data-lg-height="#{$i}"] {
+    [d-lg="#{$i}"] {
       height: #{($i * 1)}px$imp;
+      width: #{($i * 1)}px$imp;
     }
   }
 
-}
-
-@for $i from 0 through 500 {
-  [data-position-start="n#{$i}"] {
-    left: -#{($i * 1)}px$imp;
-  }
-}
-
-@for $i from 0 through 500 {
-  [data-position-bottom="#{$i}"] {
-    bottom: #{($i * 1)}px$imp;
-  }
-}
-
-@for $i from 0 through 500 {
-  [data-position-top="#{$i}"] {
-    top: #{($i * 1)}px$imp;
-  }
-}
-
-@for $i from 0 through 50 {
-  [data-inner-spacer="#{$i}"] {
-    padding: #{($i * 1)}px$imp;
-  }
 }
 
 .rounded-te{
@@ -279,6 +256,11 @@ a {
   @for $i from 0 through 1000 {
     &-#{$i}px {
       height: #{($i * 1)}px$imp;
+    }
+    &-sm-#{$i}px {
+      @include media-breakpoint-up(sm) {
+        height: #{($i * 1)}px$imp;
+      }
     }
     &-md-#{$i}px {
       @include media-breakpoint-up(md) {
@@ -474,6 +456,11 @@ a {
   @for $i from 0 through 500 {
     &-#{$i}px {
       width: #{($i * 1)}px;
+    }
+    @include media-breakpoint-up(sm) {
+      &-sm-#{$i}px{
+        width: #{($i * 1)}px$imp;
+      }
     }
     @include media-breakpoint-up(md) {
       &-md-#{$i}px{

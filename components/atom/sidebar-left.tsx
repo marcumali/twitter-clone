@@ -4,10 +4,10 @@ import Logo from '@/components/molecule/logo'
 import {Icon} from '@iconify/react'
 import { useRouter } from 'next/router'
 import DropdownButton from '../molecule/dropdown-button'
-import Avatar from '../molecule/avatar'
 import ModalButton from './modal-button'
 import Publisher from './publisher'
 import { Button } from 'react-bootstrap'
+import Avatar from '../molecule/avatar'
 
 const menuItems = [
   {
@@ -77,10 +77,10 @@ const SidebarLeft: React.FC<Props> = ({ className }: Props) => {
   }
 
   return (
-    <div className={"w-xl-200px ms-lg-auto d-none d-sm-flex flex-column " + className}>
-      <div className="w-xl-200px position-relative">
-        <div className="w-xl-200px position-fixed d-flex flex-column h-100 pt-3">
-          <Logo src="logo-symbol.png" width={40} link="/" className="mb-3" />
+    <div className={"w-sm-60px w-xl-200px ms-lg-auto d-none d-sm-flex flex-column " + className}>
+      <div className="w-sm-60px w-xl-200px position-relative">
+        <div className="w-sm-60px w-xl-200px position-fixed d-flex flex-column h-100 pt-3">
+          <Logo src="logo-symbol.png" width={40} link="/" className="mb-3 text-center text-xl-start" />
             {menuItems?.map(( item:any, index:number ) => (
               <div key={item.id}>
                 { router.pathname === '/public' ? 
@@ -112,7 +112,7 @@ const SidebarLeft: React.FC<Props> = ({ className }: Props) => {
             </ModalButton>
             <DropdownButton className="mt-auto" seamless options={[{ id: 0, label: 'Logout' }]}>
             <div className="d-flex align-items-center text-start w-100 py-3">
-              <Avatar className="mx-auto ms-xl-0 me-xl-3" />
+              <Avatar sm={30} md={40} className="mx-auto ms-xl-0 me-xl-3" />
               <div className="text-base lh-sm d-none d-xl-block">
                 <div className="fw-600 clamp clamp-1">Marc Umali</div>
                 <div className="clamp clamp-1">@marcumali</div>

@@ -57,7 +57,7 @@ const Publisher: React.FC<Props> = ({ className, hasPrivacy, btnLabel }: Props) 
   return (
     <div className={"border-bottom-1-solid-gray-1 pb-3 px-3 " + className}>
       <div className="d-flex">
-        <Avatar width={40} height={40} className="me-3" />
+        <Avatar sm={30} md={40} className="me-3" />
         <div className="w-100">
           { hasPrivacy && <Select options={privacy} className="select mb-3 w-140px select-sm" classNamePrefix="select" defaultValue={{ label: "Public", value: 0 }} /> }
           <div className="border-bottom-1-solid-gray-1 pb-3 mb-3">
