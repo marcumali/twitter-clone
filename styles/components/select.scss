@@ -1,0 +1,15 @@
+.select{
+  &__control{
+    @extend .rounded-8px;
+    @extend .minh-33px;
+  }
+  &__indicator-separator{
+    @extend .d-none;
+  }
+  &-disable-icon .select__indicator{
+    @extend .d-none;
+  }
+  &-sm .select__control{
+    min-height: inherit!important;
+  }
+}

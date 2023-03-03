@@ -1,0 +1,14 @@
+.react-tabs__tab{
+  &-list{
+    @extend .list-unstyled;
+    @extend .d-flex;
+    @extend .justify-content-around;
+    @extend .border-bottom-1-solid-gray-1;
+    @extend .px-3;
+    @extend .cursor-pointer;
+    &:focus-visible{
+      @extend .outline-none;
+    }
+  }
+  @extend .py-3;
+}

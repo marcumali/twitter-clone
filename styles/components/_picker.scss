@@ -1,0 +1,11 @@
+.reactGiphySearchbox{
+  &-componentWrapper{
+    @extend .w-100;
+    input{
+      @extend .form-control;
+    }
+  }
+  &-poweredByGiphy{
+    @extend .d-none;
+  }
+}

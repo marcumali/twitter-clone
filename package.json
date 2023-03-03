@@ -1,0 +1,35 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@iconify/react": "^4.1.0",
+    "@next/font": "13.1.6",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "bootstrap": "^5.2.3",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-dom": "18.2.0",
+    "react-giphy-searchbox": "^1.5.4",
+    "react-hook-form": "^7.43.1",
+    "react-responsive": "^9.0.2",
+    "react-select": "^5.7.0",
+    "react-tabs": "^6.0.0",
+    "react-textarea-autosize": "^8.4.0",
+    "sass": "^1.58.0",
+    "swiper": "^9.0.2",
+    "typescript": "4.9.5"
+  }
+}

@@ -1,0 +1,38 @@
+.btn{
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .rounded-20px;
+  @extend .px-5;
+  @extend .justify-content-center;
+  &-outline{
+    &-light{
+      @extend .border-1-solid-gray-1;
+      @extend .text-base;
+    }
+    &-white{
+      &,
+      &:hover{
+        @extend .text-white;
+        @extend .border-1-solid-white;
+      }
+    }
+  }
+  &-white{
+    &,
+    &:hover{
+      @extend .text-base;
+      @extend .bg-white;
+    }
+  }
+  &.btn-seamless{
+    @extend .p-0;
+    @extend .bg-transparent;
+    @extend .border-none;
+    &:after{
+      @extend .d-none;
+    }
+  }
+  &-primary{
+    @extend .text-white;
+  }
+}
