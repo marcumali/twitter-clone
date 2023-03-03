@@ -50,7 +50,7 @@ const Publisher: React.FC<Props> = ({ className, hasPrivacy, btnLabel }: Props) 
 
   const IconBtn = () => {
     return <>
-            <Icon icon="material-symbols:gif-box-outline-rounded" className="fs-20px me-3" />
+            <Icon icon="material-symbols:gif-box-outline-rounded" className="fs-22px mx-2" />
            </>
   }
 

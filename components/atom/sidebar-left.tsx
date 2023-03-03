@@ -66,60 +66,64 @@ const SidebarLeft: React.FC<Props> = ({ className }: Props) => {
   const router = useRouter()
 
   const SeamlessBtn = () => {
-    return <>
-            <Button className="w-100 d-none d-xl-block">Post</Button>
-            <div className="w-45px h-45px rounded-circle bg-primary d-flex d-xl-none align-items-center justify-content-center mx-auto">
-              <Icon icon="lucide:plus" className="text-white fs-20px" />
-            </div>
-           </>
+    return(
+      <>
+        <Button className="w-100 d-none d-xl-block">Post</Button>
+        <div className="w-45px h-45px rounded-circle bg-primary d-flex d-xl-none align-items-center justify-content-center mx-auto">
+          <Icon icon="lucide:plus" className="text-white fs-20px" />
+        </div>
+      </>
+    )
   }
 
   return (
-    <div className={"w-xl-200px ms-lg-auto d-flex flex-column " + className}>
-      <div className="mt-3 position-sticky top-13px w-xl-200px">
-        <Logo src="logo-symbol.png" width={40} link="/" className="mb-3" />
-        {menuItems?.map(( item:any, index:number ) => (
-          <div key={item.id}>
-            { router.pathname === '/public' ? 
-              <div>
-                { item.public === true && 
-                  <Link href={item.link}>
-                    <div className="d-flex align-items-center text-base mb-3 justify-content-center justify-content-xl-start">
-                      <Icon icon={`${item.icon}`} className="me-xl-3 fs-24px" />
-                      <div className="fs-16px d-none d-xl-block">{item.label}</div>
-                    </div>
-                  </Link> 
-                }
-              </div>
-            : 
-            <div>
-              { item.public === false &&
-                <Link href={item.link}>
-                  <div className="d-flex align-items-center text-base mb-3 justify-content-center justify-content-xl-start">
-                    <Icon icon={`${item.icon}`} className="me-xl-3 fs-24px" />
-                    <div className="fs-16px d-none d-xl-block">{item.label}</div>
+    <div className={"w-xl-200px ms-lg-auto d-none d-sm-flex flex-column " + className}>
+      <div className="w-xl-200px position-relative">
+        <div className="w-xl-200px position-fixed d-flex flex-column h-100 pt-3">
+          <Logo src="logo-symbol.png" width={40} link="/" className="mb-3" />
+            {menuItems?.map(( item:any, index:number ) => (
+              <div key={item.id}>
+                { router.pathname === '/public' ? 
+                  <div>
+                    { item.public === true && 
+                      <Link href={item.link}>
+                        <div className="d-flex align-items-center text-base mb-3 justify-content-center justify-content-xl-start">
+                          <Icon icon={`${item.icon}`} className="me-xl-3 fs-24px" />
+                          <div className="fs-16px d-none d-xl-block">{item.label}</div>
+                        </div>
+                      </Link> 
+                    }
                   </div>
-                </Link>
-              }
-            </div> }
-          </div> 
-        ))}
-        <ModalButton modalTitle="Add New Post" btnChildren={<SeamlessBtn />}>
-          <Publisher hasPrivacy/>
-        </ModalButton>
-      </div>
-      <DropdownButton className="mt-auto position-sticky bottom-0 w-100" seamless options={[{ id: 0, label: 'Logout' }]}>
-        <div className="d-flex align-items-center py-4 text-start w-100">
-          <Avatar className="mx-auto ms-xl-0 me-xl-3" />
-          <div className="text-base lh-sm d-none d-xl-block">
-            <div className="fw-600 clamp clamp-1">Marc Umali</div>
-            <div className="clamp clamp-1">@marcumali</div>
-          </div>
-          <div className="ms-auto">
-            <Icon icon="mdi:ellipsis-horizontal" className="fs-20px text-gray-3 d-none d-xl-block" />
-          </div>
+                : 
+                <div>
+                  { item.public === false &&
+                    <Link href={item.link}>
+                      <div className="d-flex align-items-center text-base mb-3 justify-content-center justify-content-xl-start">
+                        <Icon icon={`${item.icon}`} className="me-xl-3 fs-24px" />
+                        <div className="fs-16px d-none d-xl-block">{item.label}</div>
+                      </div>
+                    </Link>
+                  }
+                </div> }
+              </div> 
+            ))}
+            <ModalButton modalTitle="Add New Post" btnChildren={<SeamlessBtn />}>
+              <Publisher hasPrivacy/>
+            </ModalButton>
+            <DropdownButton className="mt-auto" seamless options={[{ id: 0, label: 'Logout' }]}>
+            <div className="d-flex align-items-center text-start w-100 py-3">
+              <Avatar className="mx-auto ms-xl-0 me-xl-3" />
+              <div className="text-base lh-sm d-none d-xl-block">
+                <div className="fw-600 clamp clamp-1">Marc Umali</div>
+                <div className="clamp clamp-1">@marcumali</div>
+              </div>
+              <div className="ms-auto">
+                <Icon icon="mdi:ellipsis-horizontal" className="fs-20px text-gray-3 d-none d-xl-block" />
+              </div>
+            </div>
+          </DropdownButton>
         </div>
-      </DropdownButton>
+      </div>
     </div>
   )
 }

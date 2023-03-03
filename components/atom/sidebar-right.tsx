@@ -40,7 +40,7 @@ const SidebarRight: React.FC<Props> = ({ className }: Props) => {
   const [show, setShow] = useState(false)
 
   return (
-    <div className={"mt-3 " +  className}>
+    <div className={"w-320px mt-3 position-sticky top-13px " +  className}>
       { router.pathname === '/public' ? 
         <div className="border-1-solid-gray-1 p-3 rounded-8px">
           <div className="fw-700 fs-20px">New to Holla?</div>
