@@ -7,8 +7,11 @@ import Post from '@/components/atom/post'
 import ToastFluid from '@/components/atom/toast-fluid'
 import postList from '@/data/static/postList.json'
 import trendList from '@/data/static/trendList.json'
+import { useRouter } from 'next/router'
 
-const HomePublic: NextPage = () => {
+const ExplorePublic: NextPage = () => {
+
+  const router = useRouter()
 
   return (
     <LayoutMain>
@@ -22,4 +25,4 @@ const HomePublic: NextPage = () => {
   )
 }
 
-export default HomePublic
+export default ExplorePublic

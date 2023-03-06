@@ -18,7 +18,7 @@ const SidebarRight: React.FC<Props> = ({ className }: Props) => {
 
   return (
     <div className={"w-320px mt-3 position-sticky top-13px " +  className}>
-      { router.pathname === '/public' ? 
+      { (router.pathname === '/public' || router.pathname === '/public/explore' ) ? 
         <div className="border-1-solid-gray-1 p-3 rounded-8px">
           <div className="fw-700 fs-20px">New to Holla?</div>
           <div className="text-gray-2">Sign up now to get your own personalized timeline!</div>
@@ -33,9 +33,12 @@ const SidebarRight: React.FC<Props> = ({ className }: Props) => {
             <Input type="text" placeholder="Search Holla" className="mb-3" icon="lucide:search" hasIcon/>
             <SearchResult show={show} onClickOutside={() => {setShow(false)}} />
           </div>
-          <div className="bg-gray-1 p-3 rounded-10px mb-3">
-            <Trending trendOptions={trendList} showMoreLink="#" />
-          </div>
+          
+          { router.pathname === '/explore' ? '' : 
+            <div className="bg-gray-1 p-3 rounded-10px mb-3">
+              <Trending trendOptions={trendList} showMoreLink="#" />
+            </div>
+          }
           <WhoToFollow title="Who to follow" showMoreLink="#" />
         </div>
       }

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "label": "Home",
+    "icon": "lucide:home",
+    "link": "/public"
+  },
+  {
+    "id": 1,
+    "label": "Explore",
+    "icon": "lucide:hash",
+    "link": "/public/explore"
+  }
+]

@@ -25,10 +25,12 @@ const Home: NextPage = () => {
           : 
           <div>
             <Tabs selectedTabClassName="border-bottom-3-solid-primary">
-              <TabList>
-                <Tab>For You</Tab>
-                <Tab>Following</Tab>
-              </TabList>
+              <div className="position-sticky top-56px top-sm-0px z-index-1010 bg-white w-100">
+                <TabList>
+                  <Tab>For You</Tab>
+                  <Tab>Following</Tab>
+                </TabList>
+              </div>
               <TabPanel>
                 <Publisher hasPrivacy />
                 <Post className="border-bottom-1-solid-gray-1" postList={postList} onClick={()=>alert('image clicked')} />

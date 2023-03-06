@@ -383,9 +383,17 @@ a {
 }
 
 .top{
-  @for $i from 0 through 100 {
+  @for $i from 0 through 500 {
     &-n#{$i}px {
-      top: -#{($i * 1)}px$imp;
+      top: -#{($i * 1)}px;
+    }
+    &-#{$i}px {
+      top: #{($i * 1)}px;
+    }
+    @include media-breakpoint-up(sm) {
+      &-sm-#{$i}px {
+        top: #{($i * 1)}px$imp;
+      }
     }
     @include media-breakpoint-up(md) {
       &-md-n#{$i}px {
@@ -523,19 +531,6 @@ a {
   @for $i from 0 through 500 {
     &-#{$i}px {
       max-width: #{($i * 1)}px$imp;
-    }
-  }
-}
-
-.top{
-  @for $i from 0 through 500 {
-    &-n#{$i}px {
-      top: -#{($i * 1)}px$imp;
-    }
-  }
-  @for $i from 0 through 100 {
-    &-#{$i}px {
-      top: #{($i * 1)}px$imp;
     }
   }
 }

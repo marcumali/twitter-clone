@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "label": "Home",
+    "icon": "lucide:home",
+    "link": "/"
+  },
+  {
+    "id": 1,
+    "label": "Explore",
+    "icon": "lucide:hash",
+    "link": "/explore"
+  },
+  {
+    "id": 2,
+    "label": "Notification",
+    "icon": "lucide:bell",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "label": "Messages",
+    "icon": "lucide:mail",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "label": "Profile",
+    "icon": "lucide:user",
+    "link": "#"
+  }
+]
