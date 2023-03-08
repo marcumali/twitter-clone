@@ -55,7 +55,7 @@ const Publisher: React.FC<Props> = ({ className, hasPrivacy, btnLabel }: Props) 
   }
 
   return (
-    <div className={"border-bottom-1-solid-gray-1 pb-3 px-3 " + className}>
+    <div className={"border-bottom-1-solid-gray-1 p-3 " + className}>
       <div className="d-flex">
         <Avatar sm={30} md={40} src="https://i.pravatar.cc/40/40" className="me-3" />
         <div className="w-100">

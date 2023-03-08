@@ -7,7 +7,7 @@ import DropdownButton from '../molecule/dropdown-button'
 import Image from '../molecule/image'
 import ModalButton from './modal-button'
 import Publisher from './publisher'
-import ToggleColor from '../molecule/toggle-color'
+import PostLike from '../molecule/post-like'
 
 const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 
@@ -30,7 +30,7 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 		}
 	]
 
-	const SeamlessBtn = () => {
+	const CommentButton = () => {
     return <div className="d-flex align-items-center text-gray-3">
 			<Icon icon="lucide:message-circle" className="fs-20px me-2" />
 			<div>11.9K</div>
@@ -63,8 +63,8 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 						<div>{item.text}</div>
 						{ item.img ? <Image alt="[id]" src={item.img} onClick={onClick} imgClassName="w-100" className="mt-2" fluid/> : '' }
 						<div className="d-flex align-items-center justify-content-around mt-3">
-							<ModalButton modalTitle="Write your Reply" btnChildren={<SeamlessBtn />}> 
-								<div className="d-flex px-3 mb-5">
+							<ModalButton modalTitle="Write your Reply" btnChildren={<CommentButton />}> 
+								<div className="d-flex px-3">
 									<Link href={item.link}>
 										<Avatar sm={30} md={40} className="me-3" src={item.avatar} />
 									</Link>
@@ -92,7 +92,7 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 								<Icon icon="lucide:share-2" className="text-gray-3 fs-16px me-2" />
 								<div className="text-gray-3">456</div>
 							</DropdownButton>
-							<ToggleColor />
+							<PostLike />
 						</div>
 					</div>
 				</div>

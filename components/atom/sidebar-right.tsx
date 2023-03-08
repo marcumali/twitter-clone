@@ -11,9 +11,7 @@ import SearchResult from './search-result'
 import trendList from '@/data/static/trendList.json'
 
 const SidebarRight: React.FC<Props> = ({ className }: Props) => {
-
   const router = useRouter()
-
   const [show, setShow] = useState(false)
 
   return (

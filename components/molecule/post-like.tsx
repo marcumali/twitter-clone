@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Icon} from '@iconify/react'
 
-const ToggleColor: React.FC<Props> = ({ className, colorClassName }: Props) => {
+const PostLike: React.FC<Props> = ({ className, colorClassName }: Props) => {
 
   const [activeColor, SetActiveColor] = useState(false)
 
@@ -18,9 +18,9 @@ interface Props {
   colorClassName?: string
 }
 
-ToggleColor.defaultProps = {
+PostLike.defaultProps = {
   className: '',
   colorClassName: 'text-danger'
 }
 
-export default ToggleColor
+export default PostLike

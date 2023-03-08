@@ -15,13 +15,13 @@
     "id": 2,
     "label": "Notification",
     "icon": "lucide:bell",
-    "link": "#"
+    "link": "/notifications"
   },
   {
     "id": 3,
     "label": "Messages",
     "icon": "lucide:mail",
-    "link": "#"
+    "link": "/messages"
   },
   {
     "id": 4,
