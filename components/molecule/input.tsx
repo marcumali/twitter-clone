@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form' 
 import {Icon} from '@iconify/react'
 
-const Search: React.FC<Props> = ({ className, value, placeholder, name, type, label, hasIcon, icon }: Props) => {
+const Input: React.FC<Props> = ({ className, value, placeholder, name, type, label, hasIcon, icon }: Props) => {
 
   const [values, setValues] = useState({
     password: "",
@@ -46,8 +46,8 @@ interface Props {
   type: string
 }
 
-Search.defaultProps = {
+Input.defaultProps = {
 	className: '',
 }
 
-export default Search
+export default Input

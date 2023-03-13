@@ -141,6 +141,9 @@ a {
     @include border-left( 1px, solid, $gray-1 );
     @include border-right( 1px, solid, $gray-1 );
   }
+  &-start-1-solid-gray-1{
+    @include border-left( 1px, solid, $gray-1 );
+  }
 }
 
 .rounded-ts{
@@ -554,6 +557,7 @@ a {
   }
   &-primary{
     &-2{ background-color: $primary-2$imp; }
+    &-3{ background-color: $primary-3$imp; }
     &-light{ background-color: $primary-light$imp; }
   }
   &-dark{

@@ -97,6 +97,7 @@ const Post: React.FC<Props> = ({ className, postList, onClick }: Props) => {
 					</div>
 				</div>
 			))}
+			<div className="h-45px"></div>
 		</div>
 	)
 }

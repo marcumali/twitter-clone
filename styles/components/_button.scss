@@ -35,4 +35,7 @@
   &-primary{
     @extend .text-white;
   }
+  &.p-0{
+    @extend .p-0;
+  }
 }

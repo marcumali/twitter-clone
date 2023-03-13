@@ -8,9 +8,6 @@
       @extend .px-3;
       @extend .cursor-pointer;
       @extend .mb-0;
-      &:focus-visible{
-        @extend .outline-none;
-      }
     }
     @extend .py-3;
   }
@@ -18,4 +15,8 @@
     @extend .list-unstyled;
     @extend .p-0;
   }
+}
+
+.react-tabs__tab:focus-visible{
+  @extend .outline-none;
 }

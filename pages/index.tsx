@@ -1,13 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 import type { NextPage } from 'next'
 import LayoutMain from '@/components/atom/layout-main'
 import Post from '@/components/atom/post'
-import { useRouter } from 'next/router'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Publisher from '@/components/atom/publisher'
 import postList from '@/data/static/postList.json'
+import { useMediaQuery } from 'react-responsive'
 
 const Home: NextPage = () => {
+
+  const isSM = useMediaQuery({ query: '(min-width: 576px)' })
 
   return (
     <LayoutMain>
@@ -20,11 +22,11 @@ const Home: NextPage = () => {
             </TabList>
           </div>
           <TabPanel>
-            <Publisher hasPrivacy />
+            { isSM && <Publisher hasPrivacy /> }
             <Post className="border-bottom-1-solid-gray-1" postList={postList} onClick={()=>alert('image clicked')} />
           </TabPanel>
           <TabPanel>
-            <Publisher hasPrivacy/>
+          { isSM && <Publisher hasPrivacy /> }
             <Post className="border-bottom-1-solid-gray-1" postList={postList} onClick={()=>alert('image clicked')} />
           </TabPanel>
         </Tabs>

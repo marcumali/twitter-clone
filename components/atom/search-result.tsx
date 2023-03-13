@@ -26,7 +26,7 @@ const SearchResult = (props:any) => {
   };
 
   const ref = useRef<any>(null);
-  const { onClickOutside } = props;
+  const { onClickOutside, className = 'top-32px' } = props;
 
   useEffect(() => {
     const handleClickOutside = (e:any) => {
@@ -43,7 +43,7 @@ const SearchResult = (props:any) => {
   if(!props.show) return null;
 
   return (
-    <div ref={ref} className="box-shadow-1 p-3 rounded-10px position-absolute bg-white w-100 top-32px z-index-1010">
+    <div ref={ref} className={ className + " box-shadow-1 p-3 rounded-10px position-absolute bg-white w-100 z-index-1010"}>
       <div className="fw-600 mb-3 fs-14px">Recent Searches</div>
       {RecentSearches.map((item:any, index: number, RecentSearches ) => (
         <div key={item.id}>
