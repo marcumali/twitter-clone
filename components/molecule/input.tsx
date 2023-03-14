@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form' 
 import {Icon} from '@iconify/react'
 
-const Input: React.FC<Props> = ({ className, value, placeholder, name, type, label, hasIcon, icon }: Props) => {
+const Input: React.FC<Props> = ({ className, value, placeholder, name, type, label, hasIcon, icon,  }: Props) => {
 
   const [values, setValues] = useState({
     password: "",
@@ -21,7 +21,7 @@ const Input: React.FC<Props> = ({ className, value, placeholder, name, type, lab
           <Form.Label>{label}</Form.Label>
         }
         <div className="d-flex align-items-center">
-          <Form.Control type={ type === "password" && values.showPasswordToggle ? "text" : type } name={name} value={value} placeholder={placeholder} className={ "w-100 rounded-50px " + (hasIcon ? 'ps-6' : '') } />
+          <Form.Control type={ type === "password" && values.showPasswordToggle ? "text" : type } name={name} value={value} placeholder={placeholder} className={ "w-100 rounded-50px " + (hasIcon && 'ps-6') } />
           { type === "password" && 
             <div className="w-31px ms-2">
               <div className="w-31px h-31px rounded-circle bg-primary d-flex align-items-center justify-content-center cursor-pointer text-white" onClick={passwordToggle}>

@@ -31,13 +31,12 @@ const SidebarRight: React.FC<Props> = ({ className }: Props) => {
             <Input type="text" placeholder="Search Holla" className="mb-3" icon="lucide:search" hasIcon/>
             <SearchResult show={show} onClickOutside={() => {setShow(false)}} />
           </div>
-          
           { router.pathname === '/explore' ? '' : 
             <div className="bg-gray-1 p-3 rounded-10px mb-3">
               <Trending trendOptions={trendList} showMoreLink="#" />
             </div>
           }
-          <WhoToFollow title="Who to follow" showMoreLink="#" />
+          <WhoToFollow title={ router.pathname === '/profile' ? 'You might like' : 'Who to follow' } showMoreLink="#" />
         </div>
       }
       <FooterLinks className="mt-3"/>

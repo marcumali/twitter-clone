@@ -27,6 +27,6 @@
     "id": 4,
     "label": "Profile",
     "icon": "lucide:user",
-    "link": "#"
+    "link": "/profile"
   }
 ]
