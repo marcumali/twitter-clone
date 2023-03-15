@@ -22,11 +22,11 @@ const Home: NextPage = () => {
             </TabList>
           </div>
           <TabPanel>
-            { isSM && <Publisher hasPrivacy /> }
+            { isSM && <Publisher className="border-bottom-1-solid-gray-1 p-3" hasPrivacy /> }
             <Post className="border-bottom-1-solid-gray-1" postList={postList} onClick={()=>alert('image clicked')} />
           </TabPanel>
           <TabPanel>
-          { isSM && <Publisher hasPrivacy /> }
+          { isSM && <Publisher className="border-bottom-1-solid-gray-1 p-3" hasPrivacy /> }
             <Post className="border-bottom-1-solid-gray-1" postList={postList} onClick={()=>alert('image clicked')} />
           </TabPanel>
         </Tabs>

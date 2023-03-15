@@ -43,6 +43,11 @@ const menuItems = [
     link: '/messages',
     hasNew: true,
   },
+  {
+    label: 'Profile',
+    icon: 'lucide:user',
+    link: '/profile'
+  },
 ]
 
   return (

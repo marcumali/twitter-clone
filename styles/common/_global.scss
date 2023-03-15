@@ -353,6 +353,11 @@ a {
     &-n#{$i}px {
       margin-top: -#{($i * 1)}px$imp;
     }
+    @include media-breakpoint-up(md) {
+      &-md-n#{$i}px {
+        margin-top: -#{($i * 1)}px$imp;
+      }
+    }
     @include media-breakpoint-up(lg) {
       &-lg-n#{$i}px {
         margin-top: -#{($i * 1)}px$imp;
